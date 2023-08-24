@@ -1,6 +1,6 @@
 # API Responses
 
-A Laravel package to help keep your API responses standardized.
+A package to help you keep your API Responses standardized.
 
 ## Installation
 
