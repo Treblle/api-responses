@@ -39,6 +39,11 @@
       "./vendor/bin/pest"
     ]
   },
+  "scripts-descriptions": {
+    "pint": "Run the Laravel Pint code standards",
+    "stan": "Run the PhpStan static analysis checks",
+    "test": "Run the pestPHP test suite"
+  },
   "config": {
     "optimize-autoloader": true,
     "preferred-install": "dist",
