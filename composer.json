@@ -28,6 +28,17 @@
     "phpstan/phpstan": "^1.10",
     "roave/security-advisories": "dev-latest"
   },
+  "scripts": {
+    "pint": [
+      "./vendor/bin/pint"
+    ],
+    "stan": [
+      "./vendor/bin/phpstan analyse --memory-limit=3g"
+    ],
+    "test": [
+      "./vendor/bin/pest"
+    ]
+  },
   "config": {
     "optimize-autoloader": true,
     "preferred-install": "dist",
