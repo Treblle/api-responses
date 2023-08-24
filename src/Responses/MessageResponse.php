@@ -18,7 +18,8 @@ final readonly class MessageResponse implements Responsable
     public function __construct(
         private string $data,
         private Status $status = Status::OK,
-    ) {}
+    ) {
+    }
 
     /**
      * @param $request

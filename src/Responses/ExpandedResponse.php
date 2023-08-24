@@ -13,14 +13,15 @@ final readonly class ExpandedResponse implements Responsable
 {
     /**
      * @param string $message
-     * @param array $data
+     * @param array<string,mixed> $data
      * @param Status $status
      */
     public function __construct(
         private string $message,
         private array  $data,
         private Status $status = Status::OK,
-    ) {}
+    ) {
+    }
 
     /**
      * @param $request
