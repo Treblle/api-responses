@@ -32,3 +32,23 @@ This package currently contains the following responses:
 - `ExpandedResponse`: For when you want to send a message and some data in the response.
 
 Please note, the `ErrorResponse` is not idea for any `400` responses as these are user errors such as wrong resource or Validation problems.
+
+## Handling Errors
+
+When an error occurs in your application, you should let this bubble up to your Exception Handler. Then you can respond in the following way:
+
+```php
+use Treblle\ApiResponses\Responses\ErrorResponse;
+use Treblle\ApiResponses\Data\ApiError;
+
+return new ErrorResponse(
+    data: new ApiError(
+        title: 'Bad Request',
+        detail: 'This endpoint only accepts POST requests, GET request sent.',
+        instance: request()->path(),
+        code: ErrorCode::BAD_REQUEST->value,
+        link: 'https://docs.domain.com/errors/bad-request',
+    ),
+    status: Status::BAD_REQUEST,
+);
+```
