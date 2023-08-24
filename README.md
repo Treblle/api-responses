@@ -25,8 +25,9 @@ public function __invoke(Request $request, User $user): Responsable
 
 This package currently contains the following responses:
 
-- `ModelResponse`: For responding a single model resource
-- `CollectionResponse`: For responding a collection of models for a resource
+- `ModelResponse`: For responding a single model resource.
+- `CollectionResponse`: For responding a collection of models for a resource.
 - `ErrorResponse`: For responding when you have encountered an Error.
+- `MessageResponse`: For when you are returning a simple messge.
 
 Please note, the `ErrorResponse` is not idea for any `400` responses as these are user errors such as wrong resource or Validation problems.
