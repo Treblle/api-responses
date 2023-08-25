@@ -8,7 +8,7 @@
 <!-- BADGES_START -->
 [![Latest Version][badge-release]][packagist]
 [![PHP Version][badge-php]][php]
-![tests](https://github.com/JustSteveKing/php-sdk/workflows/tests/badge.svg)
+![tests](https://github.com/treblle/api-responses/workflows/tests/badge.svg)
 [![Total Downloads][badge-downloads]][downloads]
 
 [badge-release]: https://img.shields.io/packagist/v/treblle/api-responses.svg?style=flat-square&label=release
