@@ -16,7 +16,8 @@ final readonly class MessageResponse implements Responsable
      * @param Status $status
      */
     public function __construct(
-        private string $data,
+        private array $data,
+        private string $message,
         private Status $status = Status::OK,
     ) {}
 
@@ -27,9 +28,8 @@ final readonly class MessageResponse implements Responsable
     public function toResponse($request): JsonResponse
     {
         return new JsonResponse(
-            data: [
-                'message' => $this->data,
-            ],
+            message:$this->message,
+            data:$this->data,
             status: $this->status->value,
             headers: HeaderFactory::default(),
         );
