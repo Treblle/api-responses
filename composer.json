@@ -23,9 +23,9 @@
   },
   "require-dev": {
     "laravel/pint": "^1.11",
-    "orchestra/testbench": "^8.9",
+    "orchestra/testbench": "^8.9.1",
     "pestphp/pest": "^2.16",
-    "phpstan/phpstan": "^1.10",
+    "phpstan/phpstan": "^1.10.32",
     "roave/security-advisories": "dev-latest"
   },
   "scripts": {
