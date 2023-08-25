@@ -28,6 +28,13 @@
     "phpstan/phpstan": "^1.10.32",
     "roave/security-advisories": "dev-latest"
   },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Treblle\\ApiResponses\\Providers\\PackageServiceProvider"
+      ]
+    }
+  },
   "scripts": {
     "pint": [
       "./vendor/bin/pint"

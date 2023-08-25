@@ -18,9 +18,7 @@ class HeaderFactory
     public static function default(array $headers = []): array
     {
         return array_merge(
-            [
-                'Content-Type' => 'application/vnd.api+json',
-            ],
+            (array) config('api.headers.default'),
             $headers,
         );
     }
@@ -32,9 +30,7 @@ class HeaderFactory
     public static function error(array $headers = []): array
     {
         return array_merge(
-            [
-                'Content-Type' => 'application/problem+json',
-            ],
+            (array) config('api.headers.error'),
             $headers,
         );
     }

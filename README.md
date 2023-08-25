@@ -48,6 +48,33 @@ composer require treblle/api-responses
 
 This package is easy to use, it is designed to be used within your controllers to return API responses that are simple and standardized.
 
+## Using the configuration
+
+You can publish the configuration for this package using the following artisan command:
+
+```bash
+php artisan vendor:publish --tag=api-config
+```
+
+This will return the configuration file for this package. Currently, the configuration only covers headers used in responses.
+
+```php
+return [
+    'headers' => [
+        'default' => [
+            'Content-Type' => 'application/vnd.api+json',
+        ],
+        'error' => [
+            'Content-Type' => 'application/problem+json',
+        ],
+    ],
+];
+```
+
+The `HeaderFactory` that is used in the response classes will pull with `HeaderFactory::default()` or `HeaderFactory::error()` depending if you are returning an error or a response.
+
+You can override the available headers using the configuration file. This is executed outside of any middleware you may be using - which will merge in relevant Headers as required, such as Rate Limiting and Cache headers you may have set.
+
 ## Returning a single model
 
 Some API endpoints just need to return a single model, in this situation you should use the `ModelResponse` which accepts a `JsonResource` representation of your model.
