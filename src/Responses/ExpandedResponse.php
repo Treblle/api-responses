@@ -32,7 +32,7 @@ final readonly class ExpandedResponse implements Responsable
         return new JsonResponse(
             data: [
                 'message' => $this->message,
-                ...$this->data,
+                'data' => $this->data,
             ],
             status: $this->status->value,
             headers: HeaderFactory::default(),
